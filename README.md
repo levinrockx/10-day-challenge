@@ -1,22 +1,53 @@
-# 10-Day Challenge: Day 1 & Day 2 Highlights
+# 🚀 10-Day Coding Challenge: Day 1–3 Highlights
 
-## Overview
+## 📖 Overview
 
-This repository contains my progress from the first two days of a personal coding challenge. It demonstrates basic interaction between frontend web development, Java, Node.js, and Electron.
-
----
-
-## Day One: Follow-Me Dots
-
-- Created an interactive HTML page with JavaScript.
-- The page displays red and blue dots that follow the user's mouse movements dynamically.
-- Demonstrates DOM manipulation and event handling in JavaScript.
+This repository documents my personal 10-day coding challenge journey, covering a variety of concepts across frontend development, backend logic, and cross-language integrations. Each day adds a new layer of learning.
 
 ---
 
-## Day Two: Java Integration & Electron Window
+## 🟠 Day 1: Follow-Me Dots (Frontend Fun)
 
-- Developed a simple Java program that prints "Hello World".
-- Executed the Java program using Node.js to demonstrate interoperability.
-- Used Electron.js to run the Day One "Follow-Me Dots" webpage in a separate desktop window.
-- Showcases how to combine web technologies with Java and desktop app development.
+- Built an interactive HTML page using **vanilla JavaScript**.
+- Implemented **red and blue dots** that dynamically follow the user's mouse movements.
+- Practiced **DOM manipulation**, **CSS styling**, and **event-driven logic**.
+
+📸 *Features Demonstrated:*
+- Event listeners (`mousemove`)
+- Real-time UI updates
+- Visual effects using absolute positioning
+
+---
+
+## 🔵 Day 2: Java + Node.js + Electron
+
+- Created a basic **Java program** that prints `"Hello World"`.
+- Used Node.js to execute the Java program via `child_process`.
+- Launched the HTML page from Day 1 inside an **Electron** desktop app window.
+
+🛠 *Technologies Used:*
+- `Java` (CLI)
+- `Node.js` (`child_process`)
+- `Electron` (desktop integration)
+
+---
+
+## 🟣 Day 3: Rule Engine (Modular Backend Logic)
+
+- Designed and implemented a lightweight **Rule Engine** in Node.js.
+- Defined **rules** and **actions** as separate objects, with rules referencing actions by name.
+- Enabled dynamic business logic evaluation using modular, testable components.
+
+🔁 *Example Rules Implemented:*
+- Every user must be assigned to a department.
+- Every department must have an associated quota.
+
+⚙️ *Features:*
+- Modular `rules` and `actions` mapping via string keys.
+- Conditions determine whether an action should be executed.
+- Clean separation of logic, useful for enterprise-grade configurations.
+
+🧠 *Learning Focus:*
+- Rule-based system design
+- Abstraction of business logic
+- Dynamic function mapping and evaluation
