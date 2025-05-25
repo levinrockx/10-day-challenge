@@ -51,3 +51,29 @@ This repository documents my personal 10-day coding challenge journey, covering 
 - Rule-based system design
 - Abstraction of business logic
 - Dynamic function mapping and evaluation
+
+---
+
+## ⚪ Day 4: Bouncing Balls & Tilting Board (Physics & Interaction)
+
+**Goal:** Create an interactive physics simulation with bouncing balls on a tilting board.
+
+**What I Built:**
+- A board element that visually **tilts slightly** based on mouse movement (tilt along the Z-axis).
+- Multiple balls that **bounce** realistically using velocity, gravity, and bounce factors.
+- Balls respond dynamically to the board’s tilt direction, moving accordingly.
+- Edge detection implemented **dynamically based on the parent container’s dimensions**.
+
+🎯 **Key Features:**
+- Physics simulation with velocity, gravity, and collision response.
+- Mouse-driven tilt effect using rotation on the Z-axis.
+- Balls move in response to tilt direction, enhancing realism.
+- Dynamic boundary detection to keep balls contained within the board.
+
+🧠 **What I Learned:**
+- Applying basic physics principles in UI animations.
+- Using `requestAnimationFrame` for smooth animation loops.
+- DOM element boundary detection using `getBoundingClientRect()`.
+- Mapping mouse movement to CSS transforms for interactive feedback.
+
+---
