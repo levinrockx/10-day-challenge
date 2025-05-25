@@ -1,4 +1,4 @@
-# 🚀 10-Day Coding Challenge: Day 1–3 Highlights
+# 🚀 10-Day Coding Challenge
 
 ## 📖 Overview
 
