@@ -64,16 +64,4 @@ This repository documents my personal 10-day coding challenge journey, covering 
 - Balls respond dynamically to the board’s tilt direction, moving accordingly.
 - Edge detection implemented **dynamically based on the parent container’s dimensions**.
 
-🎯 **Key Features:**
-- Physics simulation with velocity, gravity, and collision response.
-- Mouse-driven tilt effect using rotation on the Z-axis.
-- Balls move in response to tilt direction, enhancing realism.
-- Dynamic boundary detection to keep balls contained within the board.
-
-🧠 **What I Learned:**
-- Applying basic physics principles in UI animations.
-- Using `requestAnimationFrame` for smooth animation loops.
-- DOM element boundary detection using `getBoundingClientRect()`.
-- Mapping mouse movement to CSS transforms for interactive feedback.
-
 ---
