@@ -30,14 +30,29 @@ function animate(ball, initialX) {
         y = ball.animationState.y;
         xVelocity = ball.animationState.xVelocity;
         yVelocity = ball.animationState.yVelocity;
+        if (typeof ball.animationState.ballVisualRotationAngle === 'undefined') {
+            ball.animationState.ballVisualRotationAngle = 0;
+        }
     } else {
         x = initialX;
         y = 0;
         xVelocity = 0;
         yVelocity = 0;
+        ball.animationState = {
+            x: x,
+            y: y,
+            xVelocity: xVelocity,
+            yVelocity: yVelocity,
+            ballVisualRotationAngle: 0
+        };
     }
 
+    // Ensure animationState object exists even if not fully initialized above (e.g. if ball.animationState was null)
     ball.animationState = ball.animationState || {};
+    // Ensure ballVisualRotationAngle is initialized if it somehow wasn't during the main if/else
+    if (typeof ball.animationState.ballVisualRotationAngle === 'undefined') {
+        ball.animationState.ballVisualRotationAngle = 0;
+    }
 
     const gravity = 0.3;
     const bounceFactor = 0.7;
@@ -79,12 +94,17 @@ function animate(ball, initialX) {
             yVelocity = 0; // Rest on bottom
         }
 
-        ball.setPosition(x, y, 'absolute');
+        let currentRotation = ball.animationState.ballVisualRotationAngle;
+        currentRotation += xVelocity * 2; // Update visual rotation
+        ball.animationState.ballVisualRotationAngle = currentRotation;
+
+        ball.getElement().style.transform = `translate(${x}px, ${y}px) rotateZ(${currentRotation}deg)`;
 
         ball.animationState.x = x;
         ball.animationState.y = y;
         ball.animationState.xVelocity = xVelocity;
         ball.animationState.yVelocity = yVelocity;
+        // ball.animationState.ballVisualRotationAngle is already updated above
         ball.animationState.animationFrameId = requestAnimationFrame(step);
     }
 
